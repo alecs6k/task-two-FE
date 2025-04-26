@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~ng-zorro-antd/ng-zorro-antd.min.css";  // Asegúrate de que esto sea correcto
+
+// Cambiar el color primario
+$primary-color: #ff5733;  // Cambiar el color primario a un tono naranja
+
+// Otros colores que puedes cambiar
+$link-color: #1DA57A;
+
+:root {
+  --primary-color: #e82517;
+  --secondary-color: #4a1010;
+  --auxiliar-color: #ffb300;
+}
+
+.ant-btn {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+
+  &:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+
+  &:focus {
+    color: var(--auxiliar-color);
+    border-color: var(--auxiliar-color);
+  }
+}
