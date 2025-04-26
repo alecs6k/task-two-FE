@@ -1,24 +1,3 @@
-<nz-upload
-  [nzBeforeUpload]="beforeUpload"
-  [nzShowUploadList]="false"
-  (nzChange)="onImageSelected($event)">
-  <button nz-button>
-    <i nz-icon nzType="upload"></i> Selecciona una imagen
-  </button>
-</nz-upload>
-
-
-<image-cropper
-  [imageChangedEvent]="imageChangedEvent"
-  [maintainAspectRatio]="true"
-  [aspectRatio]="4 / 3"
-  [resizeToWidth]="128"
-  format="png"
-  (imageCropped)="imageCropped($event)"
-  (imageLoaded)="imageLoaded()"
-  (cropperReady)="cropperReady()"
-  (loadImageFailed)="loadImageFailed()"
-></image-cropper>
-
-<img [src]="croppedImage" />
-
+<section class="image-cropper-container">
+  <app-image-cropper-library></app-image-cropper-library>
+</section>
